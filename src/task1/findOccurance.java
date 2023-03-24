@@ -21,22 +21,22 @@ public class findOccurance {
         System.out.println(findOccurance(fruits));
     }
 
-    public static List<StructureData> findOccurance(List<String> fruList) {
+    public static List<StructureData> findOccurance(List<String> fruits) {
         List<StructureData> result = new ArrayList<>();
         List<String> bufferList = new ArrayList<>();
 
-        for (int i = 0; i < fruList.size(); i++) {
-            if(!bufferList.contains(fruList.get(i))) {
-                bufferList.add(fruList.get(i));
+        for (int i = 0; i < fruits.size(); i++) {
+            if(!bufferList.contains(fruits.get(i))) {
+                bufferList.add(fruits.get(i));
                 int count = 0;
 
-                for (int j = 0; j < fruList.size(); j++) {
-                    if(fruList.get(i).equals(fruList.get(j))) {
+                for (String fruit : fruits) {
+                    if (fruits.get(i).equals(fruit)) {
                         count++;
                     }
                 }
 
-                result.add(new StructureData(fruList.get(i), count));
+                result.add(new StructureData(fruits.get(i), count));
             }
         }
 

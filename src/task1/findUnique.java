@@ -25,12 +25,12 @@ public class findUnique {
         }
     }
 
-    public static List<Integer> findUnique (List<Integer> myListInt) {
+    public static List<Integer> findUnique (List<Integer> listDate) {
         List<Integer> resultList = new ArrayList<>();
 
-        for (int i = 0; i < myListInt.size(); i++) {
-            if(!resultList.contains(myListInt.get(i))) {
-                resultList.add(myListInt.get(i));
+        for (int i = 0; i < listDate.size(); i++) {
+            if(!resultList.contains(listDate.get(i))) {
+                resultList.add(listDate.get(i));
             }
         }
 

@@ -9,13 +9,6 @@ public class StructureData {
         this.occurrence = occurrence;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getOccurrence() {
-        return occurrence;
-    }
 
     @Override
     public String toString() {

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class countOccurance {
     public static void main(String[] args) {
-        ArrayList<String> fruits = new ArrayList<>();
+        List<String> fruits = new ArrayList<>();
         fruits.add("lemon");
         fruits.add("apple");
         fruits.add("banana");
@@ -21,11 +21,11 @@ public class countOccurance {
         System.out.println(countOccurance(fruits, "lemon"));
     }
 
-    public static int countOccurance(List<String> fruits, String str) {
+    public static int countOccurance(List<String> fruits, String name) {
         int amount = 0;
 
-        for (int i = 0; i < fruits.size(); i++) {
-            if (fruits.get(i).contains(str)) {
+        for (String fruit : fruits) {
+            if (fruit.contains(name)) {
                 amount++;
             }
         }

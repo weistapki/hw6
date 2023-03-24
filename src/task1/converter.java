@@ -5,18 +5,16 @@ import java.util.List;
 
 public class converter {
     public static void main(String[] args) {
-        List resultList = toList(new int[]{1,2,3,4,5});
-
-        for (Object integer : resultList) {
-            System.out.println(integer);
-        }
+        int[] num = {1,2,3,4,5};
+        List<Integer> convertNumbers = toList(num);
+        System.out.println(convertNumbers);
     }
 
-    public static List toList(int[] intArray) {
-        List<Integer> listResult = new ArrayList<>();
+    public static ArrayList toList(int[] intArray) {
+        ArrayList<Integer> listResult = new ArrayList<>();
 
-        for (int j : intArray) {
-            listResult.add(j);
+        for (int num : intArray) {
+            listResult.add(num);
         }
 
         return listResult;

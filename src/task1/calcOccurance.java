@@ -5,7 +5,7 @@ import java.util.List;
 
 public class calcOccurance {
     public static void main(String[] args) {
-        ArrayList<String> fruits = new ArrayList<>();
+        List<String> fruits = new ArrayList<>();
         fruits.add("lemon");
         fruits.add("apple");
         fruits.add("banana");
@@ -21,21 +21,21 @@ public class calcOccurance {
         calcOccurance(fruits);
     }
 
-    public static void calcOccurance(List<String> fruList) {
+    public static void calcOccurance(List<String> fruits) {
         List<String> bufferList = new ArrayList<>();
 
-        for (int i = 0; i < fruList.size(); i++) {
-            if(!bufferList.contains(fruList.get(i))) {
-                bufferList.add(fruList.get(i));
+        for (int i = 0; i < fruits.size(); i++) {
+            if(!bufferList.contains(fruits.get(i))) {
+                bufferList.add(fruits.get(i));
                 int count = 0;
 
-                for (int j = 0; j < fruList.size(); j++) {
-                    if(fruList.get(i).equals(fruList.get(j))) {
+                for (String fruit : fruits) {
+                    if (fruits.get(i).equals(fruit)) {
                         count++;
                     }
                 }
 
-                System.out.println(fruList.get(i) + ": " + count);
+                System.out.println(fruits.get(i) + ": " + count);
             }
         }
     }
