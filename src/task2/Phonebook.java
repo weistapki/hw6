@@ -14,6 +14,9 @@ public class Phonebook {
     public void add(String name, Integer... phoneNumbers) {
         Recording newRecording = new Recording();
         List<Integer> newPhoneNumbers = new ArrayList<>();
+
+        Collections.addAll(newPhoneNumbers, phoneNumbers);
+
         newRecording.setName(name);
         newRecording.setPhoneNumber(newPhoneNumbers);
 
