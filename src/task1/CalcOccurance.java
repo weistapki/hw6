@@ -3,7 +3,7 @@ package task1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class calcOccurance {
+public class CalcOccurance {
     public static void main(String[] args) {
         List<String> fruits = new ArrayList<>();
         fruits.add("lemon");
@@ -22,11 +22,11 @@ public class calcOccurance {
     }
 
     public static void calcOccurance(List<String> fruits) {
-        List<String> bufferList = new ArrayList<>();
+        List<String> value = new ArrayList<>();
 
         for (int i = 0; i < fruits.size(); i++) {
-            if(!bufferList.contains(fruits.get(i))) {
-                bufferList.add(fruits.get(i));
+            if(!value.contains(fruits.get(i))) {
+                value.add(fruits.get(i));
                 int count = 0;
 
                 for (String fruit : fruits) {

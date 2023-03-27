@@ -5,10 +5,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class Phonebook {
-    public List<Recording> recordingList;
+    public List<Recording> catalog;
 
     public Phonebook() {
-        recordingList = new ArrayList<>();
+        catalog = new ArrayList<>();
     }
 
     public void add(String name, Integer... phoneNumbers) {
@@ -20,12 +20,12 @@ public class Phonebook {
         newRecording.setName(name);
         newRecording.setPhoneNumber(newPhoneNumbers);
 
-        this.recordingList.add(newRecording);
+        this.catalog.add(newRecording);
     }
 
     public Recording find(String name) {
 
-        for (Recording recording : recordingList) {
+        for (Recording recording : catalog) {
             if (recording.getName().equals(name)) {
                 return recording;
             }
@@ -34,15 +34,15 @@ public class Phonebook {
         return null;
     }
 
-    public List<Recording> findAll(String... name) {
+    public List<Recording> findAll(String... names) {
         ArrayList<Recording> findResult = new ArrayList<>();
 
-        for (String date : name) {
-            for (int j = 0; j < recordingList.size(); j++) {
-                if (recordingList.get(j).getName().equals(date)) {
-                    findResult.add(recordingList.get(j));
+        for (String date : names) {
+            for (int j = 0; j < catalog.size(); j++) {
+                if (catalog.get(j).getName().equals(date)) {
+                    findResult.add(catalog.get(j));
                     break;
-                } else if (j == (recordingList.size() - 1)) {
+                } else if (j == (catalog.size() - 1)) {
                     findResult.add(null);
                 }
             }
@@ -58,7 +58,7 @@ public class Phonebook {
     @Override
     public String toString() {
         return "Phonebook{" +
-                "recordingList=" + recordingList +
+                "recordingList=" + catalog +
                 '}';
     }
 }

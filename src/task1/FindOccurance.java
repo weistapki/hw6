@@ -3,7 +3,7 @@ package task1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class findOccurance {
+public class FindOccurance {
     public static void main(String[] args) {
         ArrayList<String> fruits = new ArrayList<>();
         fruits.add("lemon");

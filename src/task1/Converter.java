@@ -1,19 +1,18 @@
 package task1;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class converter {
+public class Converter {
     public static void main(String[] args) {
-        int[] num = {1,2,3,4,5};
-        List<Integer> convertNumbers = toList(num);
+        int[] nums = {1,2,3,4,5};
+        ArrayList<Integer> convertNumbers = toList(nums);
         System.out.println(convertNumbers);
     }
 
-    public static ArrayList toList(int[] intArray) {
+    public static ArrayList<Integer> toList(int[] nums) {
         ArrayList<Integer> listResult = new ArrayList<>();
 
-        for (int num : intArray) {
+        for (int num : nums) {
             listResult.add(num);
         }
 

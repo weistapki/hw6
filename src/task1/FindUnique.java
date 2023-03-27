@@ -3,7 +3,7 @@ package task1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class findUnique {
+public class FindUnique {
     public static void main(String[] args) {
         List<Integer> listDate = new ArrayList<>();
         listDate.add(11);
@@ -20,17 +20,17 @@ public class findUnique {
 
         List<Integer> result = findUnique(listDate);
 
-        for (int i = 0; i < result.size(); i++) {
-            System.out.println(result.get(i));
+        for (Integer integer : result) {
+            System.out.println(integer);
         }
     }
 
     public static List<Integer> findUnique (List<Integer> listDate) {
         List<Integer> resultList = new ArrayList<>();
 
-        for (int i = 0; i < listDate.size(); i++) {
-            if(!resultList.contains(listDate.get(i))) {
-                resultList.add(listDate.get(i));
+        for (Integer integer : listDate) {
+            if (!resultList.contains(integer)) {
+                resultList.add(integer);
             }
         }
 
